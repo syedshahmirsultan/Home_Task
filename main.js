@@ -71,7 +71,7 @@ class FacebookPageScraper {
         likes: post.likes ? post.likes.summary.total_count : 0,
         comments: post.comments ? post.comments.summary.total_count : 0,
         shares: post.shares ? post.shares.count : 0,
-        createdAt: post.created_time,  // Adding created time
+        createdAt: post.created_time, 
       }));
 
       // Calculate total likes, comments, and shares
@@ -81,8 +81,8 @@ class FacebookPageScraper {
 
       // Compile and return results
       return {
-        pageName: pageInfo.name || '',  // Include the page's name
-        followersCount: pageInfo.followers_count || 0,  // Include followers count
+        pageName: pageInfo.name || '',
+        followersCount: pageInfo.followers_count || 0,
         totalPosts: postsContent.length,
         totalLikes,
         totalComments,
