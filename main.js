@@ -101,7 +101,7 @@ async function main() {
   const pageId = process.env.PAGE_ID;
 
   if (!accessToken || !pageId) {
-    return; // No console.log here if missing access token or page ID
+    return console.log('Please provide an access token and page ID.');
   }
 
   const scraper = new FacebookPageScraper(accessToken, pageId);
